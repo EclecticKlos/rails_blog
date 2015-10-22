@@ -2,12 +2,14 @@
   <h1 class="title"><%= @article.title %></h1>
 
   <p class="body">
-    <strong>Text:</strong>
     <%= @article.text %>
   </p>
 
-  <p class="date">
+  <p class="article_timestamp">
     Written <%= time_ago_in_words(@article.created_at) %> ago
+    | <%= link_to 'Edit', edit_article_path(@article) %>
+    | <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm:
+      "Are you sure?"} %>
   </p>
 
   <h2>Comments</h2>
@@ -16,6 +18,5 @@
   <h2>Add a comment:</h2>
   <%= render 'comments/form' %>
 
-  <%= link_to 'Edit', edit_article_path(@article) %> |
   <%= link_to 'All articles', articles_path %>
 </div>
