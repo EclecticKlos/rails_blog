@@ -1,22 +1,21 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<div class="article_content">
+  <h1 class="title"><%= @article.title %></h1>
 
-<p>
-  <strong>Text:</strong>
-  <%= @article.text %>
-</p>
+  <p class="body">
+    <strong>Text:</strong>
+    <%= @article.text %>
+  </p>
 
-<p class="date">
-  Written <%= time_ago_in_words(@article.created_at) %> ago
-</p>
+  <p class="date">
+    Written <%= time_ago_in_words(@article.created_at) %> ago
+  </p>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+  <h2>Comments</h2>
+  <%= render @article.comments %>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+  <h2>Add a comment:</h2>
+  <%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'All articles', articles_path %>
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'All articles', articles_path %>
+</div>
