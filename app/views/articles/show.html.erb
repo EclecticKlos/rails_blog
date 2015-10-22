@@ -12,10 +12,12 @@
       "Are you sure?"} %>
   </p>
 
-  <h2>Comments</h2>
-  <%= render @article.comments %>
+  <div class="comments">
+    <h2><%= @article.comments.count %> comments</h2>
+    <%= render @article.comments %>
+  </div>
 
-  <h2>Add a comment:</h2>
+  <h3>Add a comment:</h3>
   <%= render 'comments/form' %>
 
   <%= link_to 'All articles', articles_path %>
