@@ -1,15 +1,24 @@
 Rails.application.routes.draw do
 
-  # get 'welcome/index'
-
-
-  Rails.application.routes.draw do
-    resources :articles do
-      resources :comments
-    end
-    # root 'welcome#index'
-    root 'articles#index'
+  resources :articles do
+    resources :comments
   end
+
+  root 'articles#index'
+
+  get '/about', to: 'pages#about'
+end
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -67,4 +76,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
