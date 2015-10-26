@@ -47,10 +47,10 @@ group :development, :test do
   #Parallax library
   gem 'skrollr-rails'
 
-group :development, :test do
-    gem 'rspec-rails'
-    gem 'sqlite3'
-end
+# group :development, :test do
+#     gem 'rspec-rails'
+#     gem 'sqlite3'
+# end
 
 
 
