@@ -53,56 +53,31 @@ a {
 }
 
 .sidebar {
-  width: 250px;
+  display: flex;
+  flex: row;
+  width: 100%;
+  height: 4em;
   position: fixed;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background: #f5f7f9;
-  padding: 7em 0 0 0;
-  border-right: 1px solid #d6dce0;
-  .logo {
-    width: 40px;
-    height: auto;
-    position: absolute;
-    right: 3em;
-    top: 3em;
-  }
-  ul {
-    list-style: none;
-    text-align: right;
-    padding-right: 3em;
-    .category {
-      font-weight: 700;
-      font-size: 0.7em;
-      text-transform: uppercase;
-      color: #33acb7;
-    }
-    li {
-      padding: .5em 0;
-      a {
-        color: #9eafba;
-        text-decoration: none;
-        transition: all .4s ease;
-        &:hover {
-          color: #33acb7;
-        }
-      }
-    }
-    .active {
-      a {
-        color: #33acb7;
-      }
-    }
-  }
-  .sign_in {
-    position: absolute;
-    right: 3em;
-    top: 80%;
-    font-size: .8em;
-    color: #9eafba;
-  }
+  background: #000;
+  // border-right: 1px solid #d6dce0;
 }
+
+.logo {
+  display: flex;
+  width: 40px;
+  height: auto;
+  // position: absolute;
+  right: 3em;
+  top: 3em;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  padding-right: 3em;
+}
+
 
 .article_wrapper {
     padding: 3em;
@@ -186,7 +161,7 @@ a {
   }
 
 .main_content {
-  margin-left: 250px;
+  // margin-left: 250px;
   .header {
     padding: 1em 3em;
     border-bottom: 1px solid #d6dce0;

@@ -40,4 +40,7 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # Attempt to fix Javascript issue where it was unable to find images after program had run
+  # config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 end

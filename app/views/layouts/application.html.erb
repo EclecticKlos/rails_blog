@@ -16,13 +16,8 @@
     </div>
 
     <ul>
-      <li class="category">Nav</li>
       <li><%= link_to "Blog", root_path %></li>
       <li><%= link_to "About", about_path %></li>
-    </ul>
-
-    <ul>
-      <li class="category">Connect</li>
       <li><a href="https://www.facebook.com/DanKlos">Facebook</a></li>
     </ul>
 
@@ -36,7 +31,6 @@
     <% if current_page?(root_path) %>
       <p>Blog Articles</p>
     <% elsif current_page?(about_path) %>
-      <p>About</p>
     <% else %>
       <%= link_to "Back to All Articles", root_path %>
     <% end %>

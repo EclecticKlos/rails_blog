@@ -1,0 +1,16 @@
+
+#From about.html.erb
+<div class="page_wrapper">
+  <div class="profile_image">
+  <%= link_to root_path do %>
+    <%= image_tag "headshot.jpg" %>
+  <% end %>
+  </div>
+
+  <div class="content">
+    <h1>Hey, I'm Dan Klos!</h1>
+    <p>I'm going to write more about myself here.</p>
+    <p>I look forward to taking creative efforts to make this fun and informative.</p>
+  </div>
+
+</div>
