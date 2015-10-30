@@ -3,16 +3,16 @@
 @import "fluid_skeleton";
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
 
-html {
-    font: 100%/1.5em 'PT Sans', sans-serif;
-}
+// html {
+//     font: 100%/1.5em 'PT Sans', sans-serif;
+// }
 
 header.band {
     // -skrollr-animation-name:animation1;
     background: #4b371f;
     color: white;
     text-align: center;
-    padding: 10% 0 15% 0;
+    padding: 4em 0 10em 0;
 }
 
 h1, h2, h3 {
