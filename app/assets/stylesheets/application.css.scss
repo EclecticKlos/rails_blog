@@ -119,6 +119,41 @@ a.button:hover {
 
 }
 
+// Focus Points
+
+.centering_container {
+  display: flex;
+  justify-content: center;
+}
+
+.focus_points {
+  display: flex;
+  flex-direction: row;
+}
+
+.single_focus_point {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-right: 1em;
+}
+
+.focus_points_sub_headers {
+  display: flex;
+  flex-direction: row;;
+}
+
+.focus_points_text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.focus_points_text p {
+  text-align: left;
+  font-size: .7em;
+}
+
 
 // html, body {
 //   font-family: 'Raleway', sans-serif;
