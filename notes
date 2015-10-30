@@ -14,3 +14,11 @@
   </div>
 
 </div>
+
+
+#From application.rb
+    <div class="logo_container">
+      <%= link_to root_path do %>
+        <%= image_tag "headshot.jpg", class: "logo" %>
+      <% end %>
+    </div>

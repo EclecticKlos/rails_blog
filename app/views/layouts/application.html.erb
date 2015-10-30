@@ -7,14 +7,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
   <div class="sidebar">
-    <div class="logo_container">
-      <%= link_to root_path do %>
-        <%= image_tag "headshot.jpg", class: "logo" %>
-      <% end %>
-    </div>
-
     <ul>
       <li><%= link_to "Blog", root_path %></li>
       <li><%= link_to "About", about_path %></li>
@@ -46,7 +41,6 @@
     <% flash.each do |name, msg|  %>
       <%= content_tag(:div, msg, class: "alert")  %>
     <% end %>
-
     <%= yield %>
   </div>
 

@@ -1,58 +1,155 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+// /*
+//  * This is a manifest file that'll be compiled into application.css, which will include all the files
+//  * listed below.
+//  *
+//  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+//  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+//  *
+//  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+//  * compiled file so the styles you add here take precedence over styles defined in any styles
+//  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+//  * file per style scope.
+//  *
+//  *= require_tree .
+//  *= require_self
+//  */
 
-@import 'normalize';
+// @import 'normalize';
 
-html, body {
-  font-family: 'Raleway', sans-serif;
+// imports
+@import "normalize";
+@import "fluid_skeleton";
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
+
+// html {
+//     font: 100%/1.5em 'PT Sans', sans-serif;
+// }
+
+header.band {
+    // -skrollr-animation-name:animation1;
+    background: #4b371f;
+    color: white;
+    text-align: center;
+    padding: 4em 0 10em 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+.band_focus {
+    // -skrollr-animation-name:animation1;
+    background: #4b371f;
+    color: white;
+    text-align: center;
+    padding: 4em 0 10em 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.band_collaboration {
+    // -skrollr-animation-name:animation1;
+    background: #4b371f;
+    color: white;
+    text-align: center;
+    padding: 4em 0 10em 0;
 }
 
-.button {
-  outline: none;
-  background: transparent;
-  border: 1px solid #d6dce0;
-  padding: .5em 1.5em;
-  border-radius: 1.5em;
-  &:hover {
-    border: 1px solid #33acb7;
-    color: #33acb7;
-    a {
-      color: #33acb7 !important;
+h1, h2, h3 {
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+header.band h1 {
+    font-size: 3em;
+    line-height: 1em;
+    margin-bottom: 1em;
+}
+
+a.button {
+    background: #e33f0c;
+    text-align: center;
+    padding: .5em 1em;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0.2em 0 #ab3009;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    /*transition cross-browser stuff*/
+    -webkit-transition: background 0.2s ease-out;  /* Safari 3.2+, Chrome */
+    -moz-transition: background 0.2s ease-out;  /* Firefox 4-15 */
+    -o-transition: background 0.2s ease-out;  /* Opera 10.5–12.00 */
+    transition: background 0.2s ease-out;  /* Firefox 16+, Opera 12.50+ */
+}
+
+a.button:hover {
+    background: #ab3009;
+}
+
+@media only screen and (min-width: 767px) {
+  body {
+        font-size: 1.125em; /* 18px / 16px */
+        line-height: 1.7em;
     }
-  }
+
+    header.band {
+        background-image: url(nebula_small.png);
+        background-size: 100%;
+    }
+
+    header.band h1 {
+        font-size: 3.25em; /*52 / 16*/
+    }
+
+    a.button {
+        padding: .75em 1.5em;
+    }
 }
 
-.clearfix:after {
-   content: ".";
-   visibility: hidden;
-   display: block;
-   height: 0;
-   clear: both;
+@media only screen and (min-width: 767px) {
+    .band_focus {
+        background-image: url(gargantua_black_hole.png);
+        background-size: 100%;
+    }
+
 }
+
+@media only screen and (min-width: 767px) {
+    .band_collaboration {
+        background-image: url(collaboration_star_wars.png);
+        background-size: 100%;
+    }
+
+}
+
+
+// html, body {
+//   font-family: 'Raleway', sans-serif;
+// }
+
+// h1, h2, h3, h4, h5, h6 {
+//   font-weight: 500;
+// }
+
+// a {
+//   text-decoration: none;
+//   color: inherit;
+// }
+
+// .button {
+//   outline: none;
+//   background: transparent;
+//   border: 1px solid #d6dce0;
+//   padding: .5em 1.5em;
+//   border-radius: 1.5em;
+//   &:hover {
+//     border: 1px solid #33acb7;
+//     color: #33acb7;
+//     a {
+//       color: #33acb7 !important;
+//     }
+//   }
+// }
 
 .sidebar {
+  margin-top: 0px;
   display: flex;
   flex: row;
   width: 100%;
@@ -62,14 +159,14 @@ a {
   // border-right: 1px solid #d6dce0;
 }
 
-.logo {
-  display: flex;
-  width: 40px;
-  height: auto;
-  // position: absolute;
-  right: 3em;
-  top: 3em;
-}
+// .logo {
+//   display: flex;
+//   width: 40px;
+//   height: auto;
+//   // position: absolute;
+//   right: 3em;
+//   top: 3em;
+// }
 
 ul {
   display: flex;
@@ -79,164 +176,164 @@ ul {
 }
 
 
-.article_wrapper {
-    padding: 3em;
-    border-bottom: 1px solid #d6dce0;
-    .title {
-      margin: 0;
-      a {
-        font-weight: 500;
-        text-decoration: none;
-        color: #2a2f35;
-        font-size: 1.5em;
-        &:hover {
-          color: #33acb7;
-        }
-      }
-    }
-    .article_timestamp {
-      color: #9eafba;
-      margin: .5em 0 0 0;
-    }
-  }
-  .article_content {
-    padding: 1em 3em;
-    .title {
-      font-weight: 500;
-      text-decoration: none;
-      color: #2a2f35;
-      font-size: 2.5em;
-      margin-bottom: 0;
-    }
-    .body {
-      font-size: 1.1em;
-      line-height: 1.75;
-    }
-    .article_timestamp {
-      color: #9eafba;
-      margin: .5em 0 2em 0;
-    }
-    .comments {
-      h2 {
-        margin: 3em 0 1em 0;
-        border-bottom: 1px solid #d6dce0;
-        padding-bottom: 0.5em;
-      }
-      h3 {
-        margin-top: 2em;
-      }
-      .comment {
-        border-bottom: 1px solid #d6dce0;
-        padding: 1.5em 2em;
-        .clear_both {
-          clear: both;
-        }
-        &:after {
-          clear: both;
-        }
-        .comment_content {
-          float: left;
-          .comment_name {
-            margin: 1em 0 0 0;
-            font-size: 0.7em;
-            text-transform: uppercase;
-          }
-          .comment_body {
-            font-size: 1.2em;
-            margin: 0.2em 0 0 0;
-          }
-          .comment_timestamp {
-            margin-top: 1.2em;
-            font-size: .8em;
-          }
-        }
-        .button {
-          float: right;
-        }
-      }
-      input[type="text"], textarea {
-        width: 50%;
-      }
-    }
-  }
+// .article_wrapper {
+//     padding: 3em;
+//     border-bottom: 1px solid #d6dce0;
+//     .title {
+//       margin: 0;
+//       a {
+//         font-weight: 500;
+//         text-decoration: none;
+//         color: #2a2f35;
+//         font-size: 1.5em;
+//         &:hover {
+//           color: #33acb7;
+//         }
+//       }
+//     }
+//     .article_timestamp {
+//       color: #9eafba;
+//       margin: .5em 0 0 0;
+//     }
+//   }
+//   .article_content {
+//     padding: 1em 3em;
+//     .title {
+//       font-weight: 500;
+//       text-decoration: none;
+//       color: #2a2f35;
+//       font-size: 2.5em;
+//       margin-bottom: 0;
+//     }
+//     .body {
+//       font-size: 1.1em;
+//       line-height: 1.75;
+//     }
+//     .article_timestamp {
+//       color: #9eafba;
+//       margin: .5em 0 2em 0;
+//     }
+//     .comments {
+//       h2 {
+//         margin: 3em 0 1em 0;
+//         border-bottom: 1px solid #d6dce0;
+//         padding-bottom: 0.5em;
+//       }
+//       h3 {
+//         margin-top: 2em;
+//       }
+//       .comment {
+//         border-bottom: 1px solid #d6dce0;
+//         padding: 1.5em 2em;
+//         .clear_both {
+//           clear: both;
+//         }
+//         &:after {
+//           clear: both;
+//         }
+//         .comment_content {
+//           float: left;
+//           .comment_name {
+//             margin: 1em 0 0 0;
+//             font-size: 0.7em;
+//             text-transform: uppercase;
+//           }
+//           .comment_body {
+//             font-size: 1.2em;
+//             margin: 0.2em 0 0 0;
+//           }
+//           .comment_timestamp {
+//             margin-top: 1.2em;
+//             font-size: .8em;
+//           }
+//         }
+//         .button {
+//           float: right;
+//         }
+//       }
+//       input[type="text"], textarea {
+//         width: 50%;
+//       }
+//     }
+//   }
 
-.main_content {
-  // margin-left: 250px;
-  .header {
-    padding: 1em 3em;
-    border-bottom: 1px solid #d6dce0;
-    background: #f5f7f9;
-    color: #9eafba;
-    p {
-      display: inline;
-    }
-    a {
-      color: #9eafba;
-      text-decoration: none;
-    }
-    .buttons {
-      float: right;
-      margin-top: -6px;
-      .button {
-        font-size: .8em;
-        margin-left: .5em;
-      }
-    }
-  }
-  .page_wrapper {
-    padding: 3em;
-    .profile_image {
-      width: 300px;
-      float: left;
-      margin-right: 2em;
-      img {
-        width: 100%;
-        border-radius: 0.35em;
-      }
-    }
-    .content {
-      h1 {
-        font-weight: 500;
-      }
-      p {
-        font-size: 1.1em;
-        line-height: 1.75;
-      }
-      a {
-        color: #33acb7;
-        font-weight: 700;
-        text-decoration: none;
-      }
-    }
-  }
-  .links {
-    margin: 2em 0;
-  }
-  input[type="text"], input[type="email"], input[type="password"], textarea {
-    width: 90%;
-    border: 1px solid #d6dce0;
-    border-radius: .35em;
-    margin-top: 10px;
-    padding: .5em 1em;
-    line-height: 1.75;
-  }
-  input[type="text"] {
-    height: 35px;
-  }
-  textarea {
-    min-height: 180px;
-  }
-  input[type="submit"] {
-    outline: none;
-    background: transparent;
-    border: 1px solid #d6dce0;
-    padding: .5em 1.5em;
-    font-size: 1.1em;
-    border-radius: 1.5em;
-    margin-left: .5em;
-    &:hover {
-      border: 1px solid #33acb7;
-      color: #33acb7;
-    }
-  }
-}
+// .main_content {
+//   // margin-left: 250px;
+//   .header {
+//     padding: 1em 3em;
+//     border-bottom: 1px solid #d6dce0;
+//     background: #f5f7f9;
+//     color: #9eafba;
+//     p {
+//       display: inline;
+//     }
+//     a {
+//       color: #9eafba;
+//       text-decoration: none;
+//     }
+//     .buttons {
+//       float: right;
+//       margin-top: -6px;
+//       .button {
+//         font-size: .8em;
+//         margin-left: .5em;
+//       }
+//     }
+//   }
+//   .page_wrapper {
+//     padding: 3em;
+//     .profile_image {
+//       width: 300px;
+//       float: left;
+//       margin-right: 2em;
+//       img {
+//         width: 100%;
+//         border-radius: 0.35em;
+//       }
+//     }
+//     .content {
+//       h1 {
+//         font-weight: 500;
+//       }
+//       p {
+//         font-size: 1.1em;
+//         line-height: 1.75;
+//       }
+//       a {
+//         color: #33acb7;
+//         font-weight: 700;
+//         text-decoration: none;
+//       }
+//     }
+//   }
+//   .links {
+//     margin: 2em 0;
+//   }
+//   input[type="text"], input[type="email"], input[type="password"], textarea {
+//     width: 90%;
+//     border: 1px solid #d6dce0;
+//     border-radius: .35em;
+//     margin-top: 10px;
+//     padding: .5em 1em;
+//     line-height: 1.75;
+//   }
+//   input[type="text"] {
+//     height: 35px;
+//   }
+//   textarea {
+//     min-height: 180px;
+//   }
+//   input[type="submit"] {
+//     outline: none;
+//     background: transparent;
+//     border: 1px solid #d6dce0;
+//     padding: .5em 1.5em;
+//     font-size: 1.1em;
+//     border-radius: 1.5em;
+//     margin-left: .5em;
+//     &:hover {
+//       border: 1px solid #33acb7;
+//       color: #33acb7;
+//     }
+//   }
+// }
