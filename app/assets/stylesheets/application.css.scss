@@ -123,6 +123,7 @@ a.button:hover {
 
 .centering_container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -135,12 +136,13 @@ a.button:hover {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding-right: 1em;
+  margin: .6em;
 }
 
 .focus_points_sub_headers {
   display: flex;
   flex-direction: row;;
+  margin: .6em;
 }
 
 .focus_points_text {
