@@ -19,7 +19,6 @@
 // imports
 @import "normalize";
 @import "fluid_skeleton";
-@import "styles";
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
 
 // html {
@@ -91,7 +90,7 @@ a.button:hover {
     }
 
     header.band {
-        background-image: url(nebula_small.png);
+        background-image: url('nebula_small.png');
         background-size: 100%;
     }
 
@@ -106,7 +105,7 @@ a.button:hover {
 
 @media only screen and (min-width: 767px) {
     .band_focus {
-        background-image: url(gargantua_black_hole.png);
+        background-image: image-url('gargantua_black_hole.png');
         background-size: 100%;
     }
 
