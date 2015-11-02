@@ -90,7 +90,7 @@ a.button:hover {
     }
 
     header.band {
-        background-image: url('nebula_small.png');
+        background-image: image-url('nebula_small.png');
         background-size: 100%;
     }
 
@@ -113,7 +113,7 @@ a.button:hover {
 
 @media only screen and (min-width: 767px) {
     .band_collaboration {
-        background-image: url(collaboration_star_wars.png);
+        background-image: image-url('collaboration_star_wars.png');
         background-size: 100%;
     }
 
