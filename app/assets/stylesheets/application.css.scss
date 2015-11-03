@@ -14,20 +14,17 @@
 //  *= require_self
 //  */
 
-// @import 'normalize';
 
-// imports
 @import "normalize";
 @import "fluid_skeleton";
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Serif:400,700);
-
-// html {
-//     font: 100%/1.5em 'PT Sans', sans-serif;
-// }
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
 
 header.band {
     // -skrollr-animation-name:animation1;
-    background: #4b371f;
+    background: #FFFFFF;
     color: white;
     text-align: center;
     padding: 4em 0 10em 0;
@@ -35,7 +32,7 @@ header.band {
 
 .band_focus {
     // -skrollr-animation-name:animation1;
-    background: #4b371f;
+    background: #FFFFFF;
     color: white;
     text-align: center;
     padding: 4em 0 10em 0;
@@ -43,13 +40,13 @@ header.band {
 
 .band_collaboration {
     // -skrollr-animation-name:animation1;
-    background: #4b371f;
+    background: #FFFFFF;
     color: white;
     text-align: center;
     padding: 4em 0 10em 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h6 {
     font-family: 'PT Serif', serif;
     font-weight: 700;
     text-align: center;
@@ -83,6 +80,28 @@ a.button:hover {
     background: #ab3009;
 }
 
+p {
+  font-family: Bitter;
+}
+
+// h1 {
+//   font-family: Bitter;
+// }
+
+h2 {
+  font-family: Bitter;
+}
+
+h1.section_title {
+  text-transform: uppercase;
+  font-family: Montserrat;
+  font-size: 3em;
+  line-height: 1.3em;
+  font-weight: 700;
+  color: #8B8878 ;
+  margin-bottom: 0px;
+}
+
 @media only screen and (min-width: 767px) {
   body {
         font-size: 1.125em; /* 18px / 16px */
@@ -91,7 +110,6 @@ a.button:hover {
 
     header.band {
         background-image: image-url('nebula_small.png');
-        background-size: 100%;
     }
 
     header.band h1 {
@@ -105,16 +123,15 @@ a.button:hover {
 
 @media only screen and (min-width: 767px) {
     .band_focus {
-        background-image: image-url('gargantua_black_hole.png');
-        background-size: 100%;
+      background-image: image-url('gargantua_black_hole.png');
+      background-position: center;
     }
-
 }
+
 
 @media only screen and (min-width: 767px) {
     .band_collaboration {
         background-image: image-url('collaboration_star_wars.png');
-        background-size: 100%;
     }
 
 }
@@ -156,6 +173,89 @@ a.button:hover {
   font-size: .7em;
 }
 
+.sidebar {
+  margin-top: 0px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 2em;
+  position: fixed;
+  background: #FFFFFF;
+  z-index: 1;
+}
+
+.sidebar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.sidebar li {
+  display: flex;
+  padding: 1em;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #8B8878;
+  font-family: Quicksand;
+}
+
+.sidebar a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 3em;
+  background: #FFFFFF;
+  z-index: 1;
+}
+
+.footer h6{
+  margin: 0px;
+}
+
+.footer ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer li {
+  display: flex;
+  padding: 1em;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #8B8878;
+  font-family: Quicksand;
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+
+// .logo {
+//   display: flex;
+//   width: 40px;
+//   height: auto;
+//   // position: absolute;
+//   right: 3em;
+//   top: 3em;
+// }
 
 // html, body {
 //   font-family: 'Raleway', sans-serif;
@@ -184,34 +284,6 @@ a.button:hover {
 //     }
 //   }
 // }
-
-.sidebar {
-  margin-top: 0px;
-  display: flex;
-  flex: row;
-  width: 100%;
-  height: 4em;
-  position: fixed;
-  background: #000;
-  // border-right: 1px solid #d6dce0;
-}
-
-// .logo {
-//   display: flex;
-//   width: 40px;
-//   height: auto;
-//   // position: absolute;
-//   right: 3em;
-//   top: 3em;
-// }
-
-ul {
-  display: flex;
-  list-style: none;
-  text-align: center;
-  padding-right: 3em;
-}
-
 
 // .article_wrapper {
 //     padding: 3em;
