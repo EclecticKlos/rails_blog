@@ -82,6 +82,7 @@ a.button:hover {
 
 p {
   font-family: Bitter;
+  font-size: 100%
 }
 
 // h1 {
@@ -95,14 +96,22 @@ h2 {
 h1.section_title {
   text-transform: uppercase;
   font-family: Montserrat;
-  font-size: 3em;
+  font-size: 300%;
   line-height: 1.3em;
   font-weight: 700;
   color: #8B8878 ;
   margin-bottom: 0px;
 }
 
-@media only screen and (min-width: 767px) {
+h1:before{
+  display: block;
+  content: " ";
+  margin-top: -1em;
+  height: 1em;
+  visibility: hidden;
+}
+
+// @media only screen and (min-width: 767px) {
   body {
         font-size: 1.125em; /* 18px / 16px */
         line-height: 1.7em;
@@ -110,6 +119,7 @@ h1.section_title {
 
     header.band {
         background-image: image-url('nebula_small.png');
+        background-position: 0% 40%;
     }
 
     header.band h1 {
@@ -119,7 +129,7 @@ h1.section_title {
     a.button {
         padding: .75em 1.5em;
     }
-}
+// }
 
 @media only screen and (min-width: 767px) {
     .band_focus {
@@ -132,6 +142,8 @@ h1.section_title {
 @media only screen and (min-width: 767px) {
     .band_collaboration {
         background-image: image-url('collaboration_star_wars.png');
+        background-position: 44% 28%;
+        height: 500px;
     }
 
 }
@@ -174,7 +186,6 @@ h1.section_title {
 }
 
 .sidebar {
-  margin-top: 0px;
   display: flex;
   justify-content: flex-start;
   width: 100%;
@@ -194,6 +205,7 @@ h1.section_title {
 
 .sidebar li {
   display: flex;
+  font-size: large;
   padding: 1em;
 }
 
@@ -204,7 +216,7 @@ h1.section_title {
 }
 
 .sidebar a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: #000000;
 }
 

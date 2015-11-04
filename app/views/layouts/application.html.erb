@@ -12,9 +12,9 @@
   <div class="sidebar">
     <ul>
       <li><%= link_to "Home", root_path %></li>
-      <li><a href="http://localhost:3000/#about">About</a></li>
-      <li><a href="http://localhost:3000/#focus_points">Focus</a></li>
-      <li><a href="http://localhost:3000/#collaboration">Collaboration</a></li>
+      <li><%= link_to "About", root_path(:anchor => "about") %></li>
+      <li><%= link_to "Focus", root_path(:anchor => "focus_points") %></li>
+      <li><%= link_to "Collaboration", root_path(:anchor => "collaboration") %></li>
       <% if current_page?(blog_path) %>
       <% else %>
         <li><%= link_to "Blog", blog_path %></li>
