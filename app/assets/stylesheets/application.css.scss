@@ -22,6 +22,14 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 
+// html {
+//   background-image: image-url('nebula_small.png') no-repeat center center fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
+
 header.band {
     // -skrollr-animation-name:animation1;
     background: #FFFFFF;
@@ -111,25 +119,22 @@ h1:before{
   visibility: hidden;
 }
 
-// @media only screen and (min-width: 767px) {
-  body {
-        font-size: 1.125em; /* 18px / 16px */
-        line-height: 1.7em;
-    }
 
-    header.band {
+
+@media only screen and (min-width: 767px) {
+    .full_screen {
         background-image: image-url('nebula_small.png');
         background-position: 0% 40%;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        height: 100vh;
     }
+}
 
-    header.band h1 {
-        font-size: 3.25em; /*52 / 16*/
-    }
-
-    a.button {
-        padding: .75em 1.5em;
-    }
-// }
 
 @media only screen and (min-width: 767px) {
     .band_focus {
@@ -187,9 +192,8 @@ h1:before{
 
 .sidebar {
   display: flex;
-  justify-content: flex-start;
   width: 100%;
-  height: 2em;
+  height: 40px;
   position: fixed;
   background: #FFFFFF;
   z-index: 1;
@@ -197,16 +201,17 @@ h1:before{
 
 .sidebar ul {
   display: flex;
-  list-style: none;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  list-style: none;
   width: 100%;
 }
 
 .sidebar li {
   display: flex;
   font-size: large;
-  padding: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .sidebar a {
