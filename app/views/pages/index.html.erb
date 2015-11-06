@@ -24,7 +24,11 @@
     <link rel="apple-touch-icon" href="http://webdesign.tutsplus.com/wp-content/themes/tuts/images/theme/webdesigntuts/apple-touch-icon.png" />
 </head>
 
+
+
 <body>
+  <!-- <div class="offset"></div> -->
+
   <div class="full_screen">
   </div>
   <!-- <header class="band" data-0="background-position:0px -300px;" data-300="background-position:0px -300px;"> 1st = starting img position, 2nd =  -->
@@ -123,11 +127,17 @@
   </div>
 
   <script type="text/javascript">
-    var s = skrollr.init();
-
-    skrollr.init({
+    var windowHeightMinusNav = window.innerHeight - 40;
+    var s = skrollr.init({
+      constants: {
+        windowHeightMinusNavBar: windowHeightMinusNav
+      },
+      render: function(data) {
+        $('.offset').text(data.curTop)
+      },
       forceHeight: false
     });
+
 
   </script>
 

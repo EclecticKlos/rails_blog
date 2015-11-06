@@ -12,3 +12,4 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( styles.css )
 Rails.application.config.assets.precompile += %w( skrollr.js )
 Rails.application.config.assets.precompile += %w( background_vid.js )
+Rails.application.config.assets.precompile += %w( pageHeightMinusNav.js )
