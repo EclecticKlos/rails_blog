@@ -48,6 +48,21 @@
   </div>
 
 
+# Making grayscale images
+  data-300-start='-webkit-filter: grayscale(0%)'
+  data-900-start='-webkit-filter: grayscale(100%)'
+  data-300-start='filter: grayscale(0%)'
+  data-900-start='filter: grayscale(100%)'
+
+  data-anchor-target=".full_screen_first"
+
+  data-start="background-position: 0% 0%"
+  data-end="background-position: 0% -500%"
+
+  data-anchor-target=".full_screen_first"
+  data-start="transform: translateY(0px)"
+  data-400-start="transform: translateY(0px)"
+
 
 
 # From style.scss

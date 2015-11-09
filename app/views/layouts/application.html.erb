@@ -5,14 +5,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= stylesheet_link_tag     'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'pageHeightMinusNav', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 
 <body>
   <div class="sidebar">
-  <script type="text/javascript">var windowHeightMinusNav = window.innerHeight - 40;</script>
-  <script type="text/javascript">$('.sidebar').attr('data-300-start', 'bottom:0px;').attr('data-600-start', 'bottom:' + windowHeightMinusNav + 'px;');</script>
+  <%= javascript_include_tag 'navBar', 'data-turbolinks-track' => true %>
+
+
     <ul>
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "About", root_path(:anchor => "about") %></li>
@@ -38,6 +38,8 @@
   <h6>Need footer content</h6>
   </ul>
 </div>
+
+
 
 </body>
 </html>
