@@ -29,10 +29,18 @@
 <body>
   <!-- <div class="offset"></div> -->
 
-  <div class="full_screen"
-    data-100-start='-webkit-filter: grayscale(0%)' data-200-start='-webkit-filter: grayscale(100%)' data-100-start='filter: grayscale(0%)' data-200-start='filter: grayscale(100%)'
+  <div class="full_screen_first"
+    data-50-start='-webkit-filter: grayscale(0%)'
+    data-300-start='-webkit-filter: grayscale(100%)'
   >
   </div>
+
+  <div class="full_screen_second"
+   data-center="background-position: 0px 50%;" data-bottom-top="background-position: 0px 50%;" data-top-bottom="background-position: 0px 50%;" data-anchor-target=".full_screen_first"
+  >
+  </div>
+
+
   <!-- <header class="band" data-0="background-position:0px -300px;" data-300="background-position:0px -300px;"> 1st = starting img position, 2nd =  -->
 <!--   <header class="band">
   <div class="container">
@@ -142,6 +150,8 @@
 
 
   </script>
+
+
 
 </body>
 
