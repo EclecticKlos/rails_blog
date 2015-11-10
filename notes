@@ -48,20 +48,11 @@
   </div>
 
 
-# Making grayscale images
-  data-300-start='-webkit-filter: grayscale(0%)'
-  data-900-start='-webkit-filter: grayscale(100%)'
-  data-300-start='filter: grayscale(0%)'
-  data-900-start='filter: grayscale(100%)'
-
-  data-anchor-target=".full_screen_first"
-
-  data-start="background-position: 0% 0%"
-  data-end="background-position: 0% -500%"
-
-  data-anchor-target=".full_screen_first"
-  data-start="transform: translateY(0px)"
-  data-400-start="transform: translateY(0px)"
+# Fading in
+        data--100-top="opacity: 0; transform: translateY(0px)"
+        data--300-top="opacity: 1; transform: translateY(0px)"
+        data--450-top="opacity: 1; transform: translateY(0px)"
+        data--500-top="opacity: 0; transform: translateY(0px)"
 
 
 
