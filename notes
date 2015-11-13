@@ -49,10 +49,10 @@
 
 
 # Fading in
-        data--100-top="opacity: 0; transform: translateY(0px)"
+        data--50-top="opacity: 0; transform: translateY(0px)"
         data--300-top="opacity: 1; transform: translateY(0px)"
         data--450-top="opacity: 1; transform: translateY(0px)"
-        data--500-top="opacity: 0; transform: translateY(0px)"
+        data--500-top="opacity: 0; transform: translateY(0px)
 
 
 
