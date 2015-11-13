@@ -14,6 +14,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'skrollr', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'background_vid', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'scrollingBackgroundAnimation', 'data-turbolinks-track' => true %>
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -35,21 +36,21 @@
   >
   </div>
 
-  <div class="full_screen_second"
-   data-center="background-position: 0px 50%;" data-bottom-top="background-position: 0px 50%;" data-top-bottom="background-position: 0px 50%;" data-anchor-target=".full_screen_second"
-  >
+  <!-- <canvas class="background" width="1280" height="720"></canvas> -->
+  <div class="full_screen_second">
+
+
     <div class="curtainContainer">
 
-      <div class="curtain" data--1-top="opacity: 0; height 100%;" data--75-top="height: 100%; opacity: 0.75;" data-anchor-target=".full_screen_second">
+      <div class="curtain" data--1-top="opacity: 0; height 100%;" data--50-top="height: 100%; opacity: 0.75;" data-anchor-target=".full_screen_second">
       </div>
 
       <div class="copy"
-        data-anchor-target=".curtain"
-        data-top="top: 100%;"
-        data--100-top="top: 0%;"
-        data--150-top="display: block;"
-        data--300-top="top: -100%; display: none;"
-
+        data-anchor-target=".full_screen_second"
+        data--10p-top="opacity: 0; transform: translateY(0px)"
+        data--50p-top="opacity: 1; transform: translateY(0px)"
+        data--70p-top="opacity: 1; transform: translateY(0px)"
+        data--80p-top="opacity: 0; transform: translateY(0px)"
 
 
       >

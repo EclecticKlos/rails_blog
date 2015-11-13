@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   get '/blog', to: 'pages#blog'
+
+  get '/background_frames', to: 'application#background_frames'
 end
 
 
