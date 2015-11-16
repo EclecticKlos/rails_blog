@@ -1,16 +1,21 @@
+// IMAGE_URLS.array = [];
 
-// To be implemented after parallax v1 complete
+// String.prototype.supplant = function (o) {
+//     return this.replace(/{([^{}]*)}/g,
+//         function (a, b) {
+//             var r = o[b];
+//             return typeof r === 'string' || typeof r === 'number' ? r : a;
+//         }
+//     );
+// };
+// console.log(IMAGE_URLS);
 
-// var totalImages = 183;
-// var images = new Array();
-//   for(var i = 1; i <= totalImages; i++) {
-//       var filename = 'look_up/img_' + i + '.png'; // Filename of each image
-//       var img = new Image;
-//       img.src = filename;
-//       console.log("THIS IMG: " + img);
-//       images.push(img);
-//   }
+// for (var i = 0; i < 1; i++) {
+//   $('.full_screen_second').attr('data--1-top', 'opacity : 1', 'background-image : !url({imageURL});'.supplant({ imageURL: '/assets/nav_adjust/scene4-b691b411ad644bcf2c84ef9e30f52db9ffdf57c18fadf99872dff3ebb81fa548.jpg'}))
+// };
 
-// var canv = document.getElementById('background');
-// $(canv).width($(window).width()).height($(window).height());
 
+
+
+  // .attr('data--1-top', 'opacity : 1', 'background-image: !url({imageURL})'.supplant({ imageURL: IMAGE_URLS[0]}))
+// $('.sidebar').attr('data-200-start', 'bottom:0px;').attr('data-400-start', 'bottom:' + windowHeightMinusNav + 'px;');
