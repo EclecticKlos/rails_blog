@@ -146,3 +146,11 @@ a.button:hover {
 //     color: rgb(255,0,0);
 //   }
 // }
+
+  <div class="full_screen_second"
+    data-anchor-target=".full_screen_second" data--100-top="opacity: 1; background-image: !url(assets/nav_adjust/scene4-b691b411ad644bcf2c84ef9e30f52db9ffdf57c18fadf99872dff3ebb81fa548.jpg)"
+  >
+
+
+
+
