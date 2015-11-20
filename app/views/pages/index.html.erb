@@ -37,21 +37,13 @@
   >
   </div>
 
-  <div class="full_screen_second"
-    data-anchor-target=".full_screen_second"
-      <% i = 50 %>
-    <% @image_urls.each do |image| %>
-      data--<%= i %>-top="opacity: 1; background-image: !url(assets/<%=  image.gsub('"','') %>)"
-      <% i += 2  %>
-      <% p i  %>
-    <% end %>
-  >
+  <div class="full_screen_second">
 
 
     <div class="curtainContainer">
 
       <div class="curtain" data--1-top="opacity: 0; height 100%;" data--50-top="height: 100%; opacity: 0.75;" data-anchor-target=".full_screen_second">
-        <!-- <canvas id="background" width="1280" height="720"></canvas> -->
+        <canvas id="background" width="1280" height="720"></canvas>
       </div>
 
       <div class="copy"
