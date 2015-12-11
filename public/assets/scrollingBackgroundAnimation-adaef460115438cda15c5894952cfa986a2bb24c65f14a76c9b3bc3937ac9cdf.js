@@ -29,6 +29,7 @@ $(document).ready(function(){
     else {
       console.log("Calling mousewheel")
       addMouseWheel();
+      debugger
       console.log("after mousewheel" + !!window.mouseWheel)
     }
   })
@@ -57,8 +58,6 @@ var removeMouseWheel = function() {
 
 var addMouseWheel = function() {
   window.addEventListener('mousewheel', function(e) {
-    $window = $(window)
-    console.log("Inside listener")
     e.preventDefault(); // No scroll
 
     // The following equation will return either a 1 for scroll down
@@ -74,7 +73,6 @@ var addMouseWheel = function() {
 
     // See below for the details of this function
     setImage(currentLocation);
-    if (currentLocation >= images.length -1) removeMouseWheel();
   });
 }
 
